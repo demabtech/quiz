@@ -1,0 +1,14 @@
+.question-item {
+    background-color: #F4F4F4;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid white;
+}
+
+.question-item:hover {
+    background-color: #E5E5E5;
+}
+
+.pointer {
+    cursor: pointer;
+}

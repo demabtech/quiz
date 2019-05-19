@@ -1,0 +1,15 @@
+.question-item {
+    background-color: #F4F4F4;
+    border-bottom: 1px solid white;
+    padding: 10px;
+}
+
+.correct-answer {
+    border: 2px solid #28A745;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.title-question {
+    font-size: 1.1rem;
+}

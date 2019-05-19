@@ -1,0 +1,24 @@
+<div class="mt-5">
+  <h1>{{ quiz.name }} Quiz</h1>
+  <h4>Pregunta {{ questionPage + 1 }} de {{ quiz.questions.length }}</h4>
+  
+  <div class="row" *ngFor="let question of questionsFiltered; let i = index">
+    <div class="col-12">
+      <p>{{ question.name }}</p>
+      <div class="custom-control custom-radio question-item" *ngFor="let answer of question.answers; let j = index">
+        <input type="checkbox" id="customRadio{{questionPage}}{{j}}" class="custom-control-input" (change)="selectAnswer(question, answer)" [(ngModel)]="answer.selected">
+        <label class="custom-control-label pointer" for="customRadio{{questionPage}}{{j}}">{{ answer.name }}</label>
+      </div>
+      <div class="float-right">
+        {{ time }}
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="mt-3 d-flex justify-content-center">
+        <button class="btn btn-success" [disabled]="questionPage == 0" (click)="goTo(-1)">Anterior</button>
+        &nbsp;
+        <button class="btn btn-success" (click)="goTo(1)">Siguiente</button>
+      </div>
+    </div>
+  </div>
+</div>
